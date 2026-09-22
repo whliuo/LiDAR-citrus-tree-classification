@@ -1,0 +1,210 @@
+{
+  "reference_results_directory": "results_midpoint_final_consistency_v1",
+  "observation_order_source": "results_midpoint_penetration_audit_v1/01_features_l1.csv and 02_features_h300.csv",
+  "context_sources": {
+    "visual_ratings.csv": "precision/visual_grading_precision_accuracy_final.xlsx: Tree_Level columns R1-R4",
+    "qpcr.csv": "qpcr processed/HLB_qPCR_final_data.xlsx: field, hlb, qpcr"
+  },
+  "path_policy": "Original paths are archive-relative; public source filenames are data-root-relative.",
+  "reviewed_sources": [
+    {
+      "file": "script/04_extract_density_transmission_features_v4.py",
+      "lines": 4196,
+      "sha256": "3c663ef3ef7a240a239ad7bc78f6fd9ce9829748af1d4f4903ebebe5c2229f31"
+    },
+    {
+      "file": "script/04a_extract_citrus_surface_control_v4a.py",
+      "lines": 6266,
+      "sha256": "bacda82ac9e62033bc4748e7111ce8e3398955fa82fd872b9de314646a1e007d"
+    },
+    {
+      "file": "script/05_extract_citrus_radial_depth_v5.py",
+      "lines": 9258,
+      "sha256": "78b796123156eecbec9f1d21e47be78374d5b44ec9d307110f3512f3d1c25b66"
+    },
+    {
+      "file": "script/06_extract_citrus_all_designs_v6.py",
+      "lines": 11480,
+      "sha256": "851ae6c682b56d62693b6967b463e0924a6f2cc818911b430701ef05649d0a26"
+    },
+    {
+      "file": "script/07_citrus_locked_final_validation_v7.py",
+      "lines": 932,
+      "sha256": "c9d32ba75b7aeeafc0313397b765e5c47a4eed02ef13aff3ca7660007b36ad7f"
+    },
+    {
+      "file": "script/08_citrus_mechanism_locked_validation_v8.py",
+      "lines": 1722,
+      "sha256": "8256579aa1b45a5185e4dd8741eb885ef1acf36cd3519e7b0737bcb75eae8c7b"
+    },
+    {
+      "file": "script/09b_citrus_multialtitude_mechanism_v9b.py",
+      "lines": 2199,
+      "sha256": "b47a35d6adca0934b3a5f8ee9d6efb477c7ed0302dba60d7a008d206668e6263"
+    },
+    {
+      "file": "script/09c_citrus_multialtitude_mechanism_v9c.py",
+      "lines": 2555,
+      "sha256": "ef7424b56ee8673359bdce33ce339afb24d2bec123aca33463be949c866b01de"
+    },
+    {
+      "file": "script/09d_citrus_multialtitude_mechanism_v9d.py",
+      "lines": 2567,
+      "sha256": "fa0da79468a9493685d819beb0f7b4bf00706497ffa5c83412803c946a088efb"
+    },
+    {
+      "file": "script/09e_citrus_60m_final_locked_audit_v9e.py",
+      "lines": 1042,
+      "sha256": "4a676409cc50316dadb3a6decf1a95920612b1108474607f27f4c7c7a71dc5fc"
+    },
+    {
+      "file": "script/09g_gcitrus_60m_final_locked_audit_v9g.py",
+      "lines": 1459,
+      "sha256": "d9bce3a103d478ccc68ac7f8b90991fa995330486d5e6df41f6e4c882cf98ab9"
+    },
+    {
+      "file": "script/09h_citrus_cross_sensor_robustness_v9h.py",
+      "lines": 1198,
+      "sha256": "563bf33993801a4b64923f915398e5f77237f3eb2a898bd300f899e49a9389e7"
+    },
+    {
+      "file": "script/0_citrus_lidar_1dcnn_benchmark_3.py",
+      "lines": 3392,
+      "sha256": "a51bcabe3969338c733a1148a687676bd9e80a377b1d337901a2965221162701"
+    },
+    {
+      "file": "script/0_citrus_lidar_position_aware_1dcnn_v3a.py",
+      "lines": 2734,
+      "sha256": "8a4e97e6f2ff5ce076626e678f196422cb33235db46561107f7f732a0aa03a04"
+    },
+    {
+      "file": "script/0_d1_citrus_radially_constrained_penetration.py",
+      "lines": 1364,
+      "sha256": "38e8e143f99b541f772bcc670589fbe0d5b8f1673764bf9bebd35861472f5cad"
+    },
+    {
+      "file": "script/0_extract_density_penetration_features_v2.py",
+      "lines": 2344,
+      "sha256": "4f13b7255bc19009abab1cdeeaa14c9532a1587bd5766ba5681fd2aa0b088e7f"
+    },
+    {
+      "file": "script/0_test_extract_density_penetration_features_fixed.py",
+      "lines": 1099,
+      "sha256": "36db40ce4368083c297ce672f7802c00540305719df0a1c230f0ba373913a284"
+    },
+    {
+      "file": "script/10_field4_grade_audit_60m.py",
+      "lines": 875,
+      "sha256": "ad673576ce932333dbd11ff8f5f6332252884d1459923e38045e465f4851c2b9"
+    },
+    {
+      "file": "script/11_field_inspection_predictions_60m.py",
+      "lines": 668,
+      "sha256": "709146e0b799015eab3e228f4c9f2473fc4c3563cdea0a8a3731aa110abe431a"
+    },
+    {
+      "file": "script/12_export_field_errors_60m.py",
+      "lines": 365,
+      "sha256": "6d823d327be9cda93112919163c79e12df43fe1ee890f9f31322f839ca14655e"
+    },
+    {
+      "file": "script/13_citrus_simple_mechanism_validation_regraded.py",
+      "lines": 5034,
+      "sha256": "a80135a28331a3b24e1ab04b03670e8a8f775bcc34a984810667c0c36bbad340"
+    },
+    {
+      "file": "script/20_citrus_manuscript_final_statistics_v2.py",
+      "lines": 1192,
+      "sha256": "a0fbbf6aa992f2f967c41194e9a83697d116fd24365ac575036699830a4cf8c2"
+    },
+    {
+      "file": "script/d1a_compact_vertical_radial_benchmark.py",
+      "lines": 2846,
+      "sha256": "9984a65f6c62aea9dd9bb386f554c6f1c7728549126d62e23fb80153ad56e91f"
+    },
+    {
+      "file": "script/d2_citrus_flight_height_radial_sensitivity.py",
+      "lines": 2869,
+      "sha256": "46bee6481da499fd04330a4329f5a1883eefb537238d1e2ec5d72e741e306685"
+    },
+    {
+      "file": "script/d2c_citrus_oof_ensemble_benchmark.py",
+      "lines": 834,
+      "sha256": "372a8d646e71a650948d32a0fb06e0c26f50aef34377e9693301b54151807c24"
+    },
+    {
+      "file": "script/d2c_citrus_oof_ensemble_benchmark_LOCAL_v2.py",
+      "lines": 828,
+      "sha256": "64a02e4d4237ee0d05d030fbd20ddf20ba1fb371a6d439884e5e2943ac3668be"
+    },
+    {
+      "file": "script/d3a_citrus_advanced_tabular_benchmark.py",
+      "lines": 1442,
+      "sha256": "c76d16b722be7e8e3694f8e5e876dda081f8b9de36b08fa45a33117c37c5e832"
+    },
+    {
+      "file": "script/d3a_citrus_advanced_tabular_benchmark_LOCAL.py",
+      "lines": 1430,
+      "sha256": "08f1d2f50d617928b89e2e79cfce6dbde93c2ad2c46759a42b70d5162c3d431f"
+    },
+    {
+      "file": "script/d3b_citrus_vertical_radial_map_benchmark.py",
+      "lines": 2258,
+      "sha256": "943354413c25d876bd204afac75918701a92879835befb2c849237c28f8eb7c4"
+    },
+    {
+      "file": "script/fa_citrus_tree_height_distribution_020.py",
+      "lines": 628,
+      "sha256": "1261ba98b74e0bdfc4e965132e75cad88c2baa0430c27091e169f2d15ddd6e66"
+    },
+    {
+      "file": "script/fa_citrus_tree_height_distribution_020_v2.py",
+      "lines": 489,
+      "sha256": "9670dcfa286faef4a603164d2a919bbb9b4d8079048c19be0f1b4ecd802affb0"
+    },
+    {
+      "file": "script/fb_calculate_raw_las_point_density.py",
+      "lines": 453,
+      "sha256": "e25459e51d99d09d4bac41c180b49533cc9fd25c6dbb345eb4619809cd0c8bd7"
+    },
+    {
+      "file": "script/fb_density.py",
+      "lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "script/t01_cpp_depth_sensitivity_v10.py",
+      "lines": 829,
+      "sha256": "7cb6a8f41e081bbc67bc6c85dbbbefe965128d5200fe6f37f510ea1f6e64d04b"
+    },
+    {
+      "file": "script/t02_citrus_midpoint_penetration_audit_v1.py",
+      "lines": 984,
+      "sha256": "27d480c6a0693196d2ba297d806404d5e590cb25900f8426a4b9565b67af8750"
+    },
+    {
+      "file": "script/t03_citrus_midpoint_final_consistency_v1.py",
+      "lines": 1097,
+      "sha256": "3ef91ed3611ed4f9a72301361c9905b5303586d4aad9f71aec298d2cf0dd0b0e"
+    },
+    {
+      "file": "script0/00_clip_las_height.py",
+      "lines": 326,
+      "sha256": "67df2ce2420fd0f26a6c234ec924307d824993a2f5ae2a6cd0191e91d7370900"
+    },
+    {
+      "file": "script0/00a_clip_las_height_coord_check.py",
+      "lines": 212,
+      "sha256": "949c68a0c8fd602102658bec2542ec6714385b33fb1da5989cd6f873e0237cdf"
+    }
+  ],
+  "implementation_lineage": {
+    "features": "t02 midpoint extraction and V9D profile20",
+    "models_and_analysis": "t03 midpoint final consistency",
+    "profile_rf": "V9G settings and fold seeds",
+    "profile_lr_cnn_context": "manuscript final statistics V2",
+    "height": "fa height v2",
+    "density": "fb raw LAS point density"
+  },
+  "profile_input_fingerprint": "29f3c93d201beb3db9f790903b73c7e0b269337d17ca2f37f7e2232f50b31697"
+}

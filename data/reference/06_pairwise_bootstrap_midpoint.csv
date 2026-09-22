@@ -1,0 +1,31 @@
+Scheme,MethodA,MethodB,Question,Metric,A_minus_B,CI95_low,CI95_high
+five_class,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,Accuracy,0.07369614512471656,0.046485260770975034,0.10204081632653061
+five_class,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,BalancedAccuracy,0.07929206986771131,0.05029425946641734,0.10852307128890527
+five_class,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,MacroF1,0.08970315017754671,0.0595942051318086,0.12069281246219705
+five_class,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,QWK,0.02095624025198639,0.012469141775621747,0.02954755521520867
+five_class,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,Within1,0.0113378684807256,0.003401360544217691,0.020408163265306145
+five_class,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,Accuracy,-0.05782312925170063,-0.08503401360544216,-0.031746031746031744
+five_class,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,BalancedAccuracy,-0.05918800199235208,-0.08716092580086121,-0.030280220660832056
+five_class,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,MacroF1,-0.059927004437247966,-0.08866736185645889,-0.03124791407597297
+five_class,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,QWK,-0.016976315636524575,-0.025119865456816826,-0.00887203033615145
+five_class,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,Within1,-0.006802721088435382,-0.01473922902494329,0.0011337868480725266
+five_class,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,Accuracy,0.012471655328798237,-0.006802721088435382,0.031746031746031744
+five_class,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,BalancedAccuracy,0.014039586450642738,-0.006180028821600982,0.035448821772511935
+five_class,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,MacroF1,0.014963257363211357,-0.006100642758138533,0.0361985494761342
+five_class,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,QWK,0.0016514095997163247,-0.004553112181919417,0.007580803831658018
+five_class,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,Within1,-0.0011337868480725266,-0.006802721088435382,0.0045351473922902175
+merge01,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,Accuracy,0.03968253968253965,0.015873015873015928,0.0635204081632654
+merge01,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,BalancedAccuracy,0.045490404444791244,0.01616992842768641,0.07618924159427659
+merge01,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,MacroF1,0.045354377113012045,0.016368500199292306,0.07415298599599442
+merge01,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,QWK,0.02152367625342344,0.010084377672971915,0.03264882317630593
+merge01,MidpointCompact_LR,GlobalPF_Threshold,compact representation vs global physical threshold,Within1,0.009070294784580435,0.0022675736961450532,0.017006802721088343
+merge01,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,Accuracy,-0.035147392290249435,-0.05895691609977316,-0.01133786848072571
+merge01,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,BalancedAccuracy,-0.040379726621002754,-0.06911778552621643,-0.01284712650833035
+merge01,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,MacroF1,-0.041056395723733985,-0.06857422370066873,-0.01331921311329195
+merge01,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,QWK,-0.015213041562891605,-0.025020629340777686,-0.0057438176592664305
+merge01,MidpointCompact_RF,MidpointCompact_LR,does RF improve the same midpoint compact representation?,Within1,-0.0045351473922902175,-0.0113378684807256,0.0011337868480726376
+merge01,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,Accuracy,0.0,-0.01473922902494329,0.015873015873015817
+merge01,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,BalancedAccuracy,-0.0012513901783592907,-0.020446871914967708,0.017017167244609943
+merge01,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,MacroF1,-0.0013345493523201357,-0.018798819788143246,0.017116323304692746
+merge01,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,QWK,-0.0013354999390828848,-0.007829403310004684,0.00554402824723098
+merge01,MidpointExtended_LR,MidpointCompact_LR,does local deep-tail depth add to the midpoint compact representation?,Within1,-0.0022675736961451642,-0.006802721088435382,0.0022675736961450532
