@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+.idea/
+.vscode/
+.ipynb_checkpoints/
+data/segtree/
+data/rawdata/
+*.las
+*.laz
+*.lidata
+*.7z
+*.zip
+results/*
+!results/README.md
+test_outputs/
+_validation/
+# Existing local documents are preserved, but are not release files.
+/chatgpt.docx
+/~$hatgpt.docx

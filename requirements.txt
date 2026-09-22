@@ -1,0 +1,11 @@
+# Core numerical/model versions reproduce the tested local environment.
+numpy==2.4.6
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+laspy==2.7.0
+# IO, compression and figures (tested versions recorded in ENVIRONMENT.md).
+lazrs>=0.8,<0.9
+matplotlib>=3.11,<3.12
+openpyxl>=3.1,<4
+pyproj>=3.7,<4

@@ -1,0 +1,3 @@
+-r requirements.txt
+# Only needed to retrain the optional fixed Profile20 CNN.
+torch==2.13.0
