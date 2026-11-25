@@ -6,9 +6,18 @@ feature extraction, field validation, flight-altitude robustness, and L1/H300
 sensor comparisons. The associated paper will provide the scientific definitions
 and parameter rationale.
 
-Target repository: https://github.com/whliuo/LiDAR-citrus-tree-classification
+Repository: https://github.com/whliuo/LiDAR-citrus-tree-classification
 
 ## Quick start
+
+Install [Git LFS](https://git-lfs.com/) and [7-Zip](https://www.7-zip.org/), then download the repository and its point-cloud archive:
+
+```bash
+git lfs install
+git clone https://github.com/whliuo/LiDAR-citrus-tree-classification.git
+cd LiDAR-citrus-tree-classification
+git lfs pull --include="data/segtree_height.7z"
+```
 
 Use Python **3.14** (tested with 3.14.3). From this repository's root:
 
@@ -35,24 +44,28 @@ python -m pip install -r requirements.txt
 python main.py --help
 ```
 
-Obtain `segtree.7z` separately (distribution link pending), then extract its
-segmented-tree folders into `data/segtree/`:
+The archive [`data/segtree_height.7z`](data/segtree_height.7z) contains **5,758 segmented LAS files**. Extract it from the repository root:
+
+```bash
+7z x data/segtree_height.7z -odata
+```
+
+This creates the following input structure:
 
 ```text
-data/segtree/
+data/segtree_height/
   020/   040/   060/   080/   100/   120/   A120/
 ```
 
-If the archive contains a top-level `segtree_height` directory, put its contents
-at that location, or pass its path with `--data-dir`. Do not leave an extra
-directory level between the data root and `020/`. Both `020` and `20` naming
-are supported, but only one may contain observations at each altitude.
-See [data/README.md](data/README.md) for filenames, identifiers and counts.
+You can also use 7-Zip's graphical interface to extract the archive into `data/`.
+Pass `data/segtree_height` as `--data-dir`, as shown below. Both `020` and `20`
+folder naming are supported, but only one may contain observations at each
+altitude. See [data/README.md](data/README.md) for checksums and dataset details.
 
 Run the complete midpoint pipeline:
 
 ```bash
-python main.py all --workers 8
+python main.py all --data-dir data/segtree_height --workers 8
 ```
 
 This extracts all features, runs the nine fixed midpoint models, repeated
@@ -91,7 +104,7 @@ and package-version reproducibility is documented in [VALIDATION.md](VALIDATION.
 Run stages separately to reuse extracted features:
 
 ```bash
-python main.py extract --data-dir data/segtree --workers 8
+python main.py extract --data-dir data/segtree_height --workers 8
 python main.py classify --workers 8
 python main.py altitude --workers 8
 python main.py sensor --workers 8
@@ -117,7 +130,7 @@ a custom output directory, explicitly point later standalone stages to its
 feature files, for example:
 
 ```bash
-python main.py extract --output-dir results_rerun
+python main.py extract --data-dir data/segtree_height --output-dir results_rerun
 python main.py classify --features results_rerun/features/01_features_l1.csv --output-dir results_rerun
 ```
 
@@ -130,7 +143,7 @@ original training-fold median imputation.
 ## Additional manuscript utilities
 
 ```bash
-python main.py height --input-dir data/segtree/020
+python main.py height --input-dir data/segtree_height/020
 python main.py density --input-dir data/rawdata
 python main.py context --visual-repeats data/context/visual_ratings.csv --qpcr data/context/qpcr.csv
 ```
@@ -138,7 +151,7 @@ python main.py context --visual-repeats data/context/visual_ratings.csv --qpcr d
 `height` reproduces the 20-m height statistics and five distribution panels.
 `density` needs **separate raw flight LAS files**, which are not segmented-tree
 inputs; it writes footprint-density CSVs. Raw flights are not bundled with
-this repository or implicitly included in `segtree.7z`.
+this repository or implicitly included in `segtree_height.7z`.
 `context` summarizes the supplied small visual-rating and qPCR tables as
 independent evidence streams. It never matches qPCR records to LiDAR trees.
 These commands write `results/height/`, `results/density/` and `results/context/`.
@@ -154,6 +167,7 @@ segmented LAS/LAZ
 
 main.py                     single executable CLI
 src/                        shared extraction, models, analysis and plotting
+data/segtree_height.7z       segmented point clouds (Git LFS)
 data/observation_order.csv   stable identity/order metadata
 data/reference/              labelled archived regression/benchmark tables
 data/context/                optional visual and qPCR inputs
@@ -162,7 +176,7 @@ tests/                      regression checks requiring no point-cloud download
 CODE_INVENTORY.md            all original scripts and consolidation decisions
 ENVIRONMENT.md              environment setup and tested package versions
 VALIDATION.md               checks actually performed and their results
-GITHUB_SETUP.md             release contents, About text, topics and manual steps
+GITHUB_SETUP.md              data distribution and file verification
 ```
 
 The older six-class feature searches, radial/map model searches, and early

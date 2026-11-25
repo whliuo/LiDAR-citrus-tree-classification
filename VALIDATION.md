@@ -76,20 +76,14 @@ preserve the original final audit's use of explicitly archived profile rows.
   and threshold-selection experiments were not rerun or optimized.
 - LAZ reading is supported through laspy/lazrs, but the available regression
   point clouds were LAS.
-- No data download URL, archive checksum, citation, DOI or license was invented.
+- Citation, DOI and reuse-license information require the authors' publication metadata. Dataset download and checksum details are provided in `data/README.md`.
 - Saved classification tables contain metadata and numeric provenance; model
   serialization and deployment on an independently labelled cohort are outside
   the finalized research workflow.
 
 ## Upload-package checks
 
-The public ZIP contains 42 files, including the SHA-256 manifest, and excludes
-point clouds, original Word files, local audit tools, generated results and
-caches. Its code and tests total 2,487 lines, compared with 81,466 lines in the
-38 original Python files. ZIP integrity and the explicit public-file list
-were checked. After extraction into a separate directory, CLI help and all
-six fixture regression tests passed without importing original scripts or
-reading original result directories.
+The published file set is listed in `RELEASE_SHA256.txt`. It includes the segmented archive through Git LFS, reference tables, source code, tests and documentation. Generated results, extracted point clouds, local caches and original Word documents are excluded from Git.
 
 ## Original-file safety
 

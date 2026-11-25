@@ -1,14 +1,29 @@
 # Inputs
 
-The point clouds are distributed separately as **segtree.7z**. Download URL,
-archive checksum and data terms are pending owner publication.
+## Segmented point clouds
 
-Extract the folders directly below `data/segtree/`, or supply their parent with
-`python main.py extract --data-dir PATH`. The archive should contain the
-**current regraded `segtree_height` observations**, not the historical missing
-six-class `segtree` input referenced by early scripts.
+[`segtree_height.7z`](segtree_height.7z) contains **5,758 LAS observations** across six L1 flight heights and one H300 acquisition. The archive is stored in this repository with Git LFS.
 
-| Folder | Source | Altitude (m) | LAS observations in audited data |
+Run these commands from the repository root:
+
+```bash
+git lfs pull --include="data/segtree_height.7z"
+7z x data/segtree_height.7z -odata
+python main.py all --data-dir data/segtree_height --workers 8
+```
+
+Extraction creates `data/segtree_height/`, with the seven folders listed below.
+The file can also be retrieved from its GitHub file page using **Download raw file**.
+A small text pointer means the LFS download is incomplete; run `git lfs pull` to retrieve the archive.
+Use [7-Zip](https://www.7-zip.org/) to extract `.7z` files; its graphical interface can also extract the archive into `data/`.
+
+- Archive size: 640,511,808 bytes (approximately 611 MiB).
+- SHA-256: `d8b1b2409f8a74faa2a74b6b5dc25bdd49274602188c8bb350187008b71a9faa`.
+- Checksum file: [segtree_height.7z.sha256](segtree_height.7z.sha256).
+
+Keep the point-cloud filenames and seven-folder structure intact. An alternative data root can be passed with `--data-dir`.
+
+| Folder | Source | Altitude (m) | LAS observations |
 | --- | --- | --- | --- |
 | 020 | L1 | 20 | 882 |
 | 040 | L1 | 40 | 778 |

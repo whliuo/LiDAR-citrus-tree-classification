@@ -19,3 +19,7 @@ _validation/
 # Existing local documents are preserved, but are not release files.
 /chatgpt.docx
 /~$hatgpt.docx
+
+# Published point-cloud archive and local extraction.
+!data/segtree_height.7z
+data/segtree_height/
